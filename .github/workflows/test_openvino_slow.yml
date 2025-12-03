@@ -5,6 +5,7 @@ on:
   push:
     branches:
       - v*-release
+      - main
   pull_request:
     branches:
       - main

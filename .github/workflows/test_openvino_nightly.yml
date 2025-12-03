@@ -2,6 +2,8 @@ name: OpenVINO - Nightly Test
 
 on:
   push:
+    branches:
+      - v*-release
 concurrency:
   group: ${{ github.workflow }}-${{ github.head_ref || github.run_id }}
   cancel-in-progress: true
@@ -21,6 +23,7 @@ jobs:
     if: ${{ (github.event_name == 'workflow_dispatch') || (github.event_name == 'schedule') ||  (github.event_name == 'push') || contains( github.event.pull_request.labels.*.name, 'openvino-nightly') }}
     strategy:
       fail-fast: false
+      max-parallel: 1
       matrix:
         # stable and nightly openvino tests
         openvino-version: ["openvino-stable", "openvino-nightly"]

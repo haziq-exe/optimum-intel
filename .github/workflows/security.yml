@@ -2,6 +2,9 @@ name: Security Checks
 
 on:
   push:
+    branches:
+      - main
+      - v*-release
 
 permissions:
   contents: read

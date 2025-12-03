@@ -20,12 +20,13 @@ jobs:
   build:
     strategy:
       fail-fast: false
+      max-parallel: 1
       matrix:
         test-pattern:
           [
+            "*seq2seq*",
             "*export*",
             "*decoder*",
-            "*seq2seq*",
             "*modeling*",
             "*diffusion*",
             "*quantization*",
