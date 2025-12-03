@@ -1,23 +1,7 @@
 name: OpenVINO - Nightly Test
 
 on:
-  workflow_dispatch:
-  schedule:
-    # run every day at 4:41
-    - cron: "41 4 * * *"
   push:
-    branches:
-      - v*-release
-  pull_request:
-    branches:
-      - main
-    types:
-      - opened
-      - labeled
-      - reopened
-      - unlabeled
-      - synchronize
-
 concurrency:
   group: ${{ github.workflow }}-${{ github.head_ref || github.run_id }}
   cancel-in-progress: true
