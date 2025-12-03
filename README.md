@@ -27,3 +27,8 @@ To implement this, I had to manually modify the original model source code. The 
 The validation script includes a small forward pass of the model with a random image and accompanying text asking to describe the image.
 
 Finally, the script also tests the TTS components by passing a dummy tensor through the DVAE decoder. This verifies that the dimensionality reduction was applied correctly and that the new dimension sizes align with the compressed weight
+
+
+## Github Actions Validation
+
+I configured the workflow yml files of the tests coresponding to minicpmo model to run when commit is published to this branch (not in parallel to avoid HF rate limit). I also updated `test_exporters_cli.py` and `test_quantization.py` files so that the quantized layer number matches the compressed model.
