@@ -1,17 +1,7 @@
 name: OpenVINO - Notebooks Test
 
 on:
-  workflow_dispatch:
-  schedule:
-    - cron: "14 3 * * 1" # run weekly: every Monday at 3:14
   push:
-    branches:
-      - v*-release
-  pull_request:
-    paths:
-      - "notebooks/openvino/*"
-      - ".github/workflows/test_openvino_notebooks.yml"
-
 concurrency:
   group: ${{ github.workflow }}-${{ github.head_ref || github.run_id }}
   cancel-in-progress: true
