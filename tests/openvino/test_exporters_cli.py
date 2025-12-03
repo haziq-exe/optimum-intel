@@ -752,7 +752,7 @@ class OVCLIExportTestCase(unittest.TestCase):
             'int4 --group-size 4 --ratio 0.8 --sensitivity-metric "mean_activation_magnitude" '
             "--dataset contextual --num-samples 1 --trust-remote-code",
             {
-                "lm_model": {"int8": 6, "int4": 10},
+                "lm_model": {"int8": 10, "int4": 20},
                 "text_embeddings_model": {"int8": 1},
                 "vision_embeddings_model": {"int8": 8},
                 "resampler_model": {"int8": 5},

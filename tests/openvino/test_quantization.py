@@ -922,7 +922,7 @@ class OVWeightCompressionTest(unittest.TestCase):
                 processor=MODEL_NAMES["minicpmo"],
             ),
             {
-                "lm_model": {"int8": 6, "int4": 10},
+                "lm_model": {"int8": 10, "int4": 20},
                 "text_embeddings_model": {"int8": 1},
                 "vision_embeddings_model": {"int8": 8},
                 "resampler_model": {"int8": 5},
