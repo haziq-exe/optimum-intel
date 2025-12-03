@@ -1,7 +1,8 @@
 name: Style Bot
 
 on:
-  push:
+  issue_comment:
+    types: [created]
 
 permissions:
   pull-requests: write

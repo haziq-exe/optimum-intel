@@ -1,7 +1,12 @@
 name: Build documentation
 
 on:
+  workflow_dispatch:
   push:
+    branches:
+      - main
+      - doc-builder*
+      - v*-release
 
 env:
   UV_SYSTEM_PYTHON: 1

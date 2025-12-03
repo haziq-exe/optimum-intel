@@ -1,7 +1,10 @@
 name: Upload PR Documentation
 
 on:
-  push:
+  workflow_run:
+    workflows: ["Build PR Documentation"]
+    types:
+      - completed
 
 jobs:
   build:
