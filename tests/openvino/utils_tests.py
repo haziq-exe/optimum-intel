@@ -341,10 +341,10 @@ _ARCHITECTURES_TO_EXPECTED_INT8 = {
     "mamba": {"model": 322},
     "falcon-mamba": {"model": 162},
     "minicpmo": {
-        "lm_model": 16,
+        "lm_model": 30,
         "text_embeddings_model": 1,
         "vision_embeddings_model": 8,
-        "resampler_model": 6,
+        "resampler_model": 5,
     },
     "zamba2": {"model": 44},
     "exaone4": {"model": 16},
