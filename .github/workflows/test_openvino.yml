@@ -24,12 +24,12 @@ jobs:
       matrix:
         test-pattern:
           [
+            "*quantization*",
             "*seq2seq*",
             "*export*",
             "*decoder*",
             "*modeling*",
             "*diffusion*",
-            "*quantization*",
           ]
         transformers-version: ["4.45.0", "latest"]
 
